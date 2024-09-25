@@ -14,16 +14,16 @@ create table users
 );
 
 select * from users
-                  join cities on cities.id = users.city_id;
+join cities on cities.id = users.city_id;
 
 select * from users
-                  left join cities c on c.id = users.city_id;
+left join cities c on c.id = users.city_id;
 
 
 select * from users
-                  right join cities c on c.id = users.city_id;
+right join cities c on c.id = users.city_id;
 
 select client.*, CountOfWorkers from client
-                                         join application a on client.idClient = a.Client_idClient
-                                         join department d on client.Department_idDepartment = d.idDepartment
+join application a on client.idClient = a.Client_idClient
+join department d on client.Department_idDepartment = d.idDepartment
 where Sum > 10000;
